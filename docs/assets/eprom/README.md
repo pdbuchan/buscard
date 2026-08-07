@@ -1,4 +1,4 @@
-# BusCard (Revision A) TMS-2564 EPROM U1 v0.9
+# BusCard (Revision A) TMS-2564 EPROM v0.9 (U1)
 
 | File | Description |
 |---|---|
