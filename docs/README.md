@@ -1,8 +1,5 @@
 # Website HTML files and assets
 
-The complete illustrated project description is available on the
-[BusCard GitHub Pages website](https://pdbuchan.github.io/buscard/).
-
 This directory is the GitHub Pages document root.
 
 | HTML File | Description |
