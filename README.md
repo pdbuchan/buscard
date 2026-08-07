@@ -70,13 +70,13 @@ buscard/
         │   └── buscard.sch
         ├── eprom/
         │   ├── README.md
+        │   ├── buscardv0.9-tms2564.html
+        │   ├── buscard_u1_rom_discussion.html
         │   ├── burning_TMS2564_EPROM.docx
         │   ├── burning_TMS2564_EPROM.pdf
         │   ├── buscard_u1_6502_annotated_listing.txt
-        │   ├── buscard_u1_rom_discussion.html
         │   ├── buscard_u1_rom_discussion.md
-        │   ├── buscardv0.9-tms2564.bin
-        │   └── buscardv0.9-tms2564.html
+        │   └── buscardv0.9-tms2564.bin
         ├── gerber/
         │   ├── README.md
         │   ├── gerber.html
