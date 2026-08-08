@@ -5,6 +5,7 @@
 | `buscardv0.9-tms2564.bin` | Binary image of BusCard EPROM |
 | [`buscard_u1_rom_discussion.md`](buscard_u1_rom_discussion.md) | Discussion of BusCard TMP-2564 EPROM U1 Disassembly |
 | `buscard_u1_6502_annotated_listing.txt` | BusCard TMP-2564 EPROM U1 Annotated Disassembly |
+| [`additional-sockets-u13-u14-u15.md`](additional-sockets-u13-u14-u15.md) | Discussion on the U13, U14, and U15 EPROM Sockets |
 
 ## Instructions for Burning Copies of the EPROM
 
@@ -19,3 +20,4 @@
 |---|---|
 | `buscardv0.9-tms2564.html` | Webpage for BusCard TMP-2564 EPROM U1 |
 | `buscard_u1_rom_discussion.html` | Discussion of BusCard TMP-2564 EPROM U1 Disassembly |
+| `additional-sockets-u13-u14-u15.html` | Discussion on the U13, U14, and U15 EPROM Sockets |
