@@ -5,118 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>GERBER Files for BusCard Project</title>
 
-<style type="text/css">
-
-body {
-  background-color: black;
-  color: white;
-}
-
-a:link {
-  color: #66b3ff;
-}
-
-a:visited {
-  color: #c58cff;
-}
-
-a:hover,
-a:focus {
-  color: white;
-}
-
-p {
-  font-size: 14pt;
-  text-align: left;
-  font-weight: 300;
-  font-family: "Open Sans", Arial, sans-serif;
-}
-
-p.title {
-  font-size: 18pt;
-  text-align: center;
-  text-decoration: underline;
-}
-
-p.signature {
-  font-size: 10pt;
-}
-
-table {
-  width: auto;
-  border-collapse: collapse;
-}
-
-table, th, td {
-  text-align: left;
-  font-weight: 300;
-  font-family: "Open Sans", Arial, sans-serif;
-}
-
-table.header {
-  margin-top: 14pt;
-  border: none;
-  font-size: 14pt;
-}
-
-table.data {
-  border: none;
-  margin: 0;
-}
-
-td {
-  vertical-align: middle;
-}
-
-td.head-desc {
-  padding: 0px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-</style>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../buscard.css"/>
 </head>
 
 <body>
 
-<p class="title">GERBER Files for Reverse-Engineered BusCard</p>
+  <h1>GERBER Files for Reverse-Engineered BusCard</h1>
 
-<p>The following files were put into a .zip archive and sent to the board manufacturer. These are the files <a href="https://www.elecrow.com">Elecrow</a> requires. Your manufacturer may request something slightly different. Along with the GERBER files, I included a text file requesting gold fingers for the card edges, and a jpg image showing that I want the card edges to be chamfered.</p>
+  <p>The following files were put into a .zip archive and sent to the board manufacturer. These are the files <a href="https://www.elecrow.com">Elecrow</a> requires. Your manufacturer may request something slightly different. Along with the GERBER files, I included a text file requesting gold fingers for the card edges, and a jpg image showing that I want the card edges to be chamfered.</p>
 
-<table class="header">
-  <tr>
-    <td class="head-desc">GERBER Files</td>
-  </tr>
-</table>
+  <h2>GERBER Files</h2>
+  <div class="gallery-flex">
+    <ul>
+      <li><a href="buscard.GBL">Bottom copper layer</a></li>
+      <li><a href="buscard.GBO">Bottom overlay (silkscreen)</a></li>
+      <li><a href="buscard.GBS">Bottom solder mask</a></li>
+      <li><a href="buscard.GML">Mill layer</a></li>
+      <li><a href="buscard.GTL">Top copper layer</a></li>
+      <li><a href="buscard.GTO">Top overlay (silkscreen)</a></li>
+      <li><a href="buscard.GTS">Top solder mask</a></li>
+      <li><a href="buscard.TXT">Drill file</a></li>
+    </ul>
+  </div>
 
-<table class="data">
-  <tr><td><ul>
-    <li><a href="buscard.GBL">Bottom copper layer</a></li>
-    <li><a href="buscard.GBO">Bottom overlay (silkscreen)</a></li>
-    <li><a href="buscard.GBS">Bottom solder mask</a></li>
-    <li><a href="buscard.GML">Mill layer</a></li>
-    <li><a href="buscard.GTL">Top copper layer</a></li>
-    <li><a href="buscard.GTO">Top overlay (silkscreen)</a></li>
-    <li><a href="buscard.GTS">Top solder mask</a></li>
-    <li><a href="buscard.TXT">Drill file</a></li>
-   </ul></td></tr>
-</table>
+  <h2>Chamfer and Gold Finger Request Files</h2>
+  <div class="gallery-flex">
+    <ul>
+      <li><a href="PLEASE_CHAMFER_CARD_EDGES.jpg">Chamfer request jpg</a> (1.1 MB)</li>
+      <li><a href="PLEASE_CONTACT_ME_ABOUT_GOLD_FINGERS.txt">Gold finger request text file</a></li>
+    </ul>
+  </div>
 
-<table class="header">
-  <tr>
-    <td class="head-desc">Chamfer and Gold Finger Request Files</td>
-  </tr>
-</table>
-
-<table class="data">
-  <tr><td><ul>
-    <li><a href="PLEASE_CHAMFER_CARD_EDGES.jpg">Chamfer request jpg</a> (1.1 MB)</li>
-    <li><a href="PLEASE_CONTACT_ME_ABOUT_GOLD_FINGERS.txt">Gold finger request text file</a></li>
-  </ul></td></tr>
-</table>
-
-<p class="signature">P. David Buchan <a href="mailto:pdbuchan@gmail.com">pdbuchan@gmail.com</a></p>
+  <p class="signature">P. David Buchan <a href="mailto:pdbuchan@gmail.com">pdbuchan@gmail.com</a></p>
 
 </body>
 </html>

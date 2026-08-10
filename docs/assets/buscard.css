@@ -1,0 +1,58 @@
+/*
+ * Shared stylesheet for the BusCard Project.
+ */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+}
+
+a:link {
+  color: #66b3ff;
+}
+
+a:visited {
+  color: #c58cff;
+}
+
+a:hover,
+a:focus {
+  color: white;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 2em;
+}
+
+p {
+  font-size: 14pt;
+  text-align: left;
+}
+
+p.signature {
+  font-size: 10pt;
+}
+
+ul,
+ol {
+  font-size: 12pt;
+  text-align: left;
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: left;
+  align-items: center;
+}
+
+/* Keep large images within the browser window on narrow screens. */
+img {
+  max-width: 100%;
+  height: auto;
+}

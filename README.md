@@ -18,6 +18,7 @@ buscard/
     ├── index.html
     ├── .nojekyll
     └── assets/
+        ├── buscard.css
         ├── buscard_rev_a_manual.pdf
         ├── schematic.pdf
         ├── cam/

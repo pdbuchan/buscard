@@ -5,119 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>BusCard Project</title>
 
-<style type="text/css">
-
-body {
-  background-color: black;
-  color: white;
-}
-
-a:link {
-  color: #66b3ff;
-}
-
-a:visited {
-  color: #c58cff;
-}
-
-a:hover,
-a:focus {
-  color: white;
-}
-
-p {
-  font-size: 14pt;
-  text-align: left;
-  font-weight: 300;
-  font-family: "Open Sans", Arial, sans-serif;
-}
-
-p.title {
-  font-size: 18pt;
-  text-align: center;
-  text-decoration: underline;
-}
-
-p.signature {
-  font-size: 10pt;
-}
-
-table {
-  width: auto;
-  border-collapse: collapse;
-}
-
-table, th, td {
-  text-align: left;
-  font-weight: 300;
-  font-family: "Open Sans", Arial, sans-serif;
-}
-
-table.header {
-  margin-top: 14pt;
-  border: none;
-  font-size: 14pt;
-}
-
-table.data {
-  border: none;
-  margin: 0;
-}
-
-td {
-  vertical-align: middle;
-}
-
-td.head-desc {
-  padding: 0px;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-</style>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="assets/buscard.css"/>
 </head>
 
 <body>
 
-<p class="title">BusCard Project</p>
+  <h1>BusCard Project</h1>
 
-<p>Project files are available in the <a href="https://github.com/pdbuchan/buscard">BusCard GitHub repository</a>.</p>
+  <p>Project files are available in the <a href="https://github.com/pdbuchan/buscard">BusCard GitHub repository</a>.</p>
 
-<p>Here I present information on the BusCard, an IEEE-488 and parallel printer interface for the Commodore 64. The BusCard and subsequent BusCard II were manufactured by Batteries Included Ltd. of Toronto, Canada. On my BusCard, the circuit board is labeled "Rev A" and "1983". I used it to provide IEEE-488 functionality to my Commodore 64 in order to use a 4040 disk drive and 8023P printer. It also provides BASIC 4.0 and comes with an assembler and disassembler.</p>
+  <p>Here I present information on the BusCard, an IEEE-488 and parallel printer interface for the Commodore 64. The BusCard and subsequent BusCard II were manufactured by Batteries Included Ltd. of Toronto, Canada. On my BusCard, the circuit board is labeled "Rev A" and "1983". I used it to provide IEEE-488 functionality to my Commodore 64 in order to use a 4040 disk drive and 8023P printer. It also provides BASIC 4.0 and comes with an assembler and disassembler.</p>
 
-<p>Unlike the BusCard II, the BusCard does not contain any proprietary integrated circuits. As a result, I was able to successfully reverse-engineer it and produce an exact working duplicate. I used EAGLE CAD software for the schematic and circuit board design. Autodesk discontinued EAGLE in June 2026, but native EAGLE design and library files remain compatible with <a href="https://www.autodesk.com/products/fusion-360/overview">Autodesk Fusion Electronics.</a>. All information required to produce it is provided below. If you would like to build it, you can send the GERBER files provided below to the manufacturer of your choice. You would only need compatible PCB design software if you wish to change the board layout or circuit.</p>
+  <p>Unlike the BusCard II, the BusCard does not contain any proprietary integrated circuits. As a result, I was able to successfully reverse-engineer it and produce an exact working duplicate. I used EAGLE CAD software for the schematic and circuit board design. Autodesk discontinued EAGLE in June 2026, but native EAGLE design and library files remain compatible with <a href="https://www.autodesk.com/products/fusion-360/overview">Autodesk Fusion Electronics.</a>. All information required to produce it is provided below. If you would like to build it, you can send the GERBER files provided below to the manufacturer of your choice. You would only need compatible PCB design software if you wish to change the board layout or circuit.</p>
 
-<table class="header">
-  <tr>
-    <td class="head-desc">Properties of Original BusCard</td>
-  </tr>
-</table>
-
-<table class="data">
-  <tr><td><ul>
+  <h2>Properties of Original BusCard</h2>
+  <ul>
     <li><a href="assets/images/orig_gallery.html">Picture gallery</a></li>
     <li><a href="assets/buscard_rev_a_manual.pdf">Manual</a> (45 MB pdf) - I have scanned the manual into an Acrobat (.pdf) file. The manual was accompanied by a rather long and convoluted errata sheet and I have cut and pasted the errata items into the manual and created a fresh table of contents to reflect the new page numbering.</li>
     <li><a href="assets/drawings/buscard_schematic.pdf">Schematic (hand-drawn)</a> (7.5 MB pdf)</li>
     <li>Parts layout as an <a href="assets/drawings/buscard_parts_layout.pdf">Acrobat file</a> (10 KB pdf) and as a <a href="assets/drawings/buscard_parts_layout.vsdx">Microsoft Visio Drawing</a> (35 KB .vsdx file).</li>
-    <li><a href="assets/parts/orig_buscard_parts.xlsx">Parts list</a> (11 kB)</li>
+    <li>Original BusCard Parts list as <a href="assets/parts/orig_buscard_parts.xlsx">Microsoft Excel document</a> (11 kB .xlsx file)</li>
     <li><a href="assets/datasheets/datasheets.html">Datasheets</a></li>
     <li>Printed circuit board dimensions as an <a href="assets/drawings/buscard_dimensions.pdf">Acrobat file</a> (17 KB pdf) and as a <a href="assets/drawings/buscard_dimensions.vsdx">Microsoft Visio drawing</a> (67 KB .vsdx file).</li>
     <li><a href="assets/eprom/buscardv0.9-tms2564.html">BusCard V0.9 EPROM binary image, disassembly, and discussion</a></li>
     <li>Parallel printer port contact assignments as an <a href="assets/drawings/buscard_parallel_port.pdf">Acrobat file</a> (48 KB pdf) and as a <a href="assets/drawings/buscard_parallel_port.vsdx">Microsoft Visio drawing</a> (22 KB .vsdx file).</li>
     <li>IEEE-488 port contact assignments as an <a href="assets/drawings/buscard_IEEE-488_port.pdf">Acrobat file</a> (52 KB pdf) and as a <a href="assets/drawings/buscard_IEEE-488_port.vsdx">Microsoft Visio drawing</a> (23 KB .vsdx file).</li>
     <li>BusCard's Commodore 64 expansion port (the BusCard's card edge that pushes into the C-64's expansion slot) contact assignments as an <a href="assets/drawings/buscard_expansion_port.pdf">Acrobat file</a> (89 KB pdf) and as a <a href="assets/drawings/buscard_expansion_port.vsdx">Microsoft Visio drawing</a> (26 KB .vsdx file). The BusCard also has a female card edge socket which is a pass-through of the C-64's slot; see gallery.</li>
-  </ul></td></tr>
-</table>
+  </ul>
 
-<table class="header">
-  <tr>
-    <td class="head-desc">Properties of Reverse-Engineered BusCard</td>
-  </tr>
-</table>
-
-<table class="data">
-  <tr><td><ul>
+  <h2>Properties of Reverse-Engineered BusCard</h2>
+  <ul>
     <li><a href="assets/images/new_gallery.html">Picture gallery</a></li>
     <li>EAGLE <a href="assets/eagle/buscard.sch">schematic</a> (708 KB) and <a href="assets/eagle/buscard.brd">board</a> (610 KB) files, and an <a href="assets/schematic.pdf">Acrobat version</a> (75 KB pdf) of the schematic.</li>
     <li>EAGLE <a href="assets/cam/elecrow-gerb274x.cam">CAM file</a> for generating the GERBER files required by <a href="https://www.elecrow.com">Elecrow</a> for manufacturing the board.</li>
@@ -128,10 +46,9 @@ td.head-desc {
     <li>Bill of materials (BOM) as a <a href="assets/parts/new_buscard_bom.xlsx">Microsoft Excel spreadsheet</a> (9 KB .xlsx file). I used a regular 16-pin DIP socket for the switches (rather than wirewrap) and the diodes were still able to fit underneath.</li>
       <li>Since the original <a href="assets/datasheets/8255AC-5.pdf">NEC D8255AC-5</a> is no longer manufactured, I instead use the <a href="assets/datasheets/82C55A.pdf">Intersil CP82C55A-5Z</a> 8-bit, 4 MHz, Programmable Peripheral Interface (552 KB pdf).</li>
     <li><a href="assets/libraries/libraries.html">EAGLE Libraries</a></li>
-  </ul></td></tr>
-</table>
+  </ul>
 
-<p class="signature">P. David Buchan <a href="mailto:pdbuchan@gmail.com">pdbuchan@gmail.com</a></p>
+  <p class="signature">P. David Buchan <a href="mailto:pdbuchan@gmail.com">pdbuchan@gmail.com</a></p>
 
 </body>
 </html>
