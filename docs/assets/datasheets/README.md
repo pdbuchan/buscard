@@ -25,4 +25,8 @@
 | `resistors.pdf` | Resistor (general) |
 | `shunt.pdf` | Shunts for jumpering pins on BusCard |
 | `TMS2564.pdf` | 65,536-bit, Ultraviolet-Erasable, Electrically Programmable Read-Only Memory (EPROM) |
-| `datasheets.html` | HTML webpage about datasheets for GitHub Pages |
+
+## File for GitHub Pages
+| File | Description |
+|---|---|
+| `datasheets.html` | Webpage about datasheets for GitHub Pages |

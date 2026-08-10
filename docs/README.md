@@ -14,6 +14,7 @@ This directory is the GitHub Pages document root.
 
 | File | Description |
 |---|---|
+| `assets/buscard.css` | Shared stylesheet for BusCard project |
 | `assets/buscard_rev_a_manual.pdf` | Scan of the BusCard manual with errata incorporated |
 | `assets/schematic.pdf` | The reverse-engineered BusCard schematic, rendered by EAGLE |
 

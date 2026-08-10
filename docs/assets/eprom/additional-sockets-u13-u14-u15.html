@@ -182,21 +182,21 @@ facility is important.</p>
 C64 address space. The reconstructed organization is:</p>
 
 <table>
-<tr><th>Physical U1 offset</th><th>CPU address</th><th>Principal contents</th></tr>
-<tr><td><code>$0000-$0BFF</code></td><td><code>$A000-$ABFF</code></td><td>Machine-language monitor and low-level BusCard I/O drivers</td></tr>
-<tr><td><code>$0C00-$0FFF</code></td><td><code>$EC00-$EFFF</code></td><td>Resident C64 KERNAL overlay and BusCard dispatch code</td></tr>
-<tr><td><code>$1000-$113B</code></td><td><code>$B000-$B13B</code></td><td>BASIC extension installer/uninstaller and associated data</td></tr>
-<tr><td><code>$113C-$147A</code></td><td><code>$B13C-$B47A</code></td><td>Zero fill</td></tr>
-<tr><td><code>$147B-$1FFF</code></td><td><code>$B47B-$BFFF</code></td><td>Encoded relocatable BASIC command extension</td></tr>
+  <tr><th>Physical U1 offset</th><th>CPU address</th><th>Principal contents</th></tr>
+  <tr><td><code>$0000-$0BFF</code></td><td><code>$A000-$ABFF</code></td><td>Machine-language monitor and low-level BusCard I/O drivers</td></tr>
+  <tr><td><code>$0C00-$0FFF</code></td><td><code>$EC00-$EFFF</code></td><td>Resident C64 KERNAL overlay and BusCard dispatch code</td></tr>
+  <tr><td><code>$1000-$113B</code></td><td><code>$B000-$B13B</code></td><td>BASIC extension installer/uninstaller and associated data</td></tr>
+  <tr><td><code>$113C-$147A</code></td><td><code>$B13C-$B47A</code></td><td>Zero fill</td></tr>
+  <tr><td><code>$147B-$1FFF</code></td><td><code>$B47B-$BFFF</code></td><td>Encoded relocatable BASIC command extension</td></tr>
 </table>
 
 <p>The resident ROM provides three public entry points:</p>
 
 <table>
-<tr><th>BASIC command</th><th>Address</th><th>Function</th></tr>
-<tr><td><code>SYS 61000</code></td><td><code>$EE48</code></td><td>Install/enable the BusCard BASIC 4.0-style command extension</td></tr>
-<tr><td><code>SYS 61003</code></td><td><code>$EE4B</code></td><td>Remove/disable the command extension</td></tr>
-<tr><td><code>SYS 61006</code></td><td><code>$EE4E</code></td><td>Enter the BusCard machine-language monitor</td></tr>
+  <tr><th>BASIC command</th><th>Address</th><th>Function</th></tr>
+  <tr><td><code>SYS 61000</code></td><td><code>$EE48</code></td><td>Install/enable the BusCard BASIC 4.0-style command extension</td></tr>
+  <tr><td><code>SYS 61003</code></td><td><code>$EE4B</code></td><td>Remove/disable the command extension</td></tr>
+  <tr><td><code>SYS 61006</code></td><td><code>$EE4E</code></td><td>Enter the BusCard machine-language monitor</td></tr>
 </table>
 
 <p>The important discovery is that <code>SYS 61000</code> does <strong>not</strong> enable U13, U14, or
@@ -223,10 +223,10 @@ three more pieces of the U1 command wedge.</p>
 system:</p>
 
 <ul>
-<li>U1, controlled by <code>PD/!PGM1</code>;</li>
-<li>U13, controlled by <code>PD/!PGM2</code>;</li>
-<li>U14, controlled by <code>PD/!PGM3</code>;</li>
-<li>U15, controlled by <code>PD/!PGM4</code>.</li>
+  <li>U1, controlled by <code>PD/!PGM1</code>;</li>
+  <li>U13, controlled by <code>PD/!PGM2</code>;</li>
+  <li>U14, controlled by <code>PD/!PGM3</code>;</li>
+  <li>U15, controlled by <code>PD/!PGM4</code>.</li>
 </ul>
 
 <p>U13, U14, and U15 share the same address and data buses. Each is an 8K x 8
@@ -237,11 +237,11 @@ Intel 8255 PPI, <code>PB0</code> and <code>PB1</code>, feed one half of U10, a 7
 line decoder. Three decoder outputs are wired to the three optional EPROMs:</p>
 
 <table>
-<tr><th>8255 bank bits</th><th>74LS139 output</th><th>Selected EPROM</th></tr>
-<tr><td><code>PB1 PB0 = 00</code></td><td><code>Y0</code> / <code>PD/!PGM4</code></td><td>U15</td></tr>
-<tr><td><code>PB1 PB0 = 01</code></td><td><code>Y1</code> / <code>PD/!PGM3</code></td><td>U14</td></tr>
-<tr><td><code>PB1 PB0 = 10</code></td><td><code>Y2</code> / <code>PD/!PGM2</code></td><td>U13</td></tr>
-<tr><td><code>PB1 PB0 = 11</code></td><td><code>Y3</code></td><td>No U13-U15 EPROM is connected to this decoder output</td></tr>
+  <tr><th>8255 bank bits</th><th>74LS139 output</th><th>Selected EPROM</th></tr>
+  <tr><td><code>PB1 PB0 = 00</code></td><td><code>Y0</code> / <code>PD/!PGM4</code></td><td>U15</td></tr>
+  <tr><td><code>PB1 PB0 = 01</code></td><td><code>Y1</code> / <code>PD/!PGM3</code></td><td>U14</td></tr>
+  <tr><td><code>PB1 PB0 = 10</code></td><td><code>Y2</code> / <code>PD/!PGM2</code></td><td>U13</td></tr>
+  <tr><td><code>PB1 PB0 = 11</code></td><td><code>Y3</code></td><td>No U13-U15 EPROM is connected to this decoder output</td></tr>
 </table>
 
 <p>Thus U13-U15 are <strong>banks</strong>, not three simultaneously visible 8K pieces of a
@@ -277,12 +277,12 @@ is restored.</p>
 <p>The resulting arrangement can be summarized as follows:</p>
 
 <table>
-<tr><th>BusCard ROM state</th><th><code>$A000-$BFFF</code> contents</th></tr>
-<tr><td>BusCard firmware selected (<code>PB3=0</code> in the MAME model)</td><td>U1</td></tr>
-<tr><td>Optional BASIC-ROM mode, bank <code>10</code></td><td>U13</td></tr>
-<tr><td>Optional BASIC-ROM mode, bank <code>01</code></td><td>U14</td></tr>
-<tr><td>Optional BASIC-ROM mode, bank <code>00</code></td><td>U15</td></tr>
-<tr><td>Optional BASIC-ROM mode, bank <code>11</code></td><td>No optional EPROM selected; normal C64 BASIC can remain visible</td></tr>
+  <tr><th>BusCard ROM state</th><th><code>$A000-$BFFF</code> contents</th></tr>
+  <tr><td>BusCard firmware selected (<code>PB3=0</code> in the MAME model)</td><td>U1</td></tr>
+  <tr><td>Optional BASIC-ROM mode, bank <code>10</code></td><td>U13</td></tr>
+  <tr><td>Optional BASIC-ROM mode, bank <code>01</code></td><td>U14</td></tr>
+  <tr><td>Optional BASIC-ROM mode, bank <code>00</code></td><td>U15</td></tr>
+  <tr><td>Optional BASIC-ROM mode, bank <code>11</code></td><td>No optional EPROM selected; normal C64 BASIC can remain visible</td></tr>
 </table>
 
 <p>The precise logic also depends on the normal C64 <code>LORAM</code>/<code>HIRAM</code> memory-control
@@ -327,9 +327,9 @@ fundamentally different mechanism.</p>
 <p>The evidence therefore points to two separate facilities:</p>
 
 <ol>
-<li><strong>U1 BASIC 4.0-style command extension</strong> -- a compact disk-command package
+  <li><strong>U1 BASIC 4.0-style command extension</strong> -- a compact disk-command package
 stored in U1, expanded into RAM, and enabled by <code>SYS 61000</code>.</li>
-<li><strong>U13-U15 optional BASIC-ROM facility</strong> -- up to 24K of additional physical
+  <li><strong>U13-U15 optional BASIC-ROM facility</strong> -- up to 24K of additional physical
 ROM, bank-selected into <code>$A000-$BFFF</code> by the 8255 and external decode logic.</li>
 </ol>
 
@@ -343,12 +343,11 @@ use of the BusCard's KERNAL interception and IEEE-488/parallel-printer support.<
 <p>The hardware evidence supports a <strong>BASIC-related purpose</strong> strongly:</p>
 
 <ul>
-<li><code>PB0</code> and <code>PB1</code> are the ROM-bank select bits;</li>
-<li><code>PB3</code> is explicitly identified in the MAME hardware model as <code>BASIC ROM enable</code>;</li>
-<li>the selected EPROM replaces the C64 BASIC ROM at <code>$A000-$BFFF</code>;</li>
-<li>the BusCard was advertised/documented as providing BASIC 4.0 functionality;</li>
-<li>three 8K devices provide enough storage for a substantially larger ROM-based
-language environment than the 2725-byte U1 command extension.</li>
+  <li><code>PB0</code> and <code>PB1</code> are the ROM-bank select bits;</li>
+  <li><code>PB3</code> is explicitly identified in the MAME hardware model as <code>BASIC ROM enable</code>;</li>
+  <li>the selected EPROM replaces the C64 BASIC ROM at <code>$A000-$BFFF</code>;</li>
+  <li>the BusCard was advertised/documented as providing BASIC 4.0 functionality;</li>
+  <li>three 8K devices provide enough storage for a substantially larger ROM-based language environment than the 2725-byte U1 command extension.</li>
 </ul>
 
 <p>For these reasons, the most plausible interpretation is that Batteries
@@ -359,9 +358,8 @@ extension built into U1.</p>
 <p>There are two closely related ways the sockets could have been used:</p>
 
 <ul>
-<li>as three banks belonging to one larger, bank-switched software package; or</li>
-<li>as up to three separately selectable 8K ROM images associated with the
-optional BASIC-ROM feature.</li>
+  <li>as three banks belonging to one larger, bank-switched software package; or</li>
+  <li>as up to three separately selectable 8K ROM images associated with the optional BASIC-ROM feature.</li>
 </ul>
 
 <p>The circuit alone does not distinguish these possibilities. What it proves is
@@ -378,11 +376,11 @@ image is loaded normally as <code>0.9.u1</code>.</p>
 <p>Consequently, the evidence does <strong>not</strong> establish any of the following:</p>
 
 <ul>
-<li>that U13-U15 were populated on every BusCard;</li>
-<li>that Batteries Included necessarily shipped a three-ROM set with the card;</li>
-<li>that the three ROMs contained an unmodified Commodore PET/CBM BASIC 4.0 ROM set;</li>
-<li>that all 24K formed one continuous logical program;</li>
-<li>the exact entry points, commands, bank-switching protocol, or revision of
+  <li>that U13-U15 were populated on every BusCard;</li>
+  <li>that Batteries Included necessarily shipped a three-ROM set with the card;</li>
+  <li>that the three ROMs contained an unmodified Commodore PET/CBM BASIC 4.0 ROM set;</li>
+  <li>that all 24K formed one continuous logical program;</li>
+  <li>the exact entry points, commands, bank-switching protocol, or revision of
 any software intended for those sockets.</li>
 </ul>
 
@@ -394,15 +392,15 @@ that term for its own compact C64 extension.</p>
 <h1>Confidence of the present conclusions</h1>
 
 <table>
-<tr><th>Conclusion</th><th>Confidence</th><th>Basis</th></tr>
-<tr><td>U13-U15 are three 8K TMS2564 ROM positions</td><td>Very high</td><td>Schematic and device type</td></tr>
-<tr><td>They share the <code>$A000-$BFFF</code> CPU window rather than forming a directly visible 24K range</td><td>Very high</td><td>Decode logic and MAME hardware model</td></tr>
-<tr><td><code>PB0/PB1</code> select among U15, U14, and U13</td><td>Very high</td><td>Schematic 74LS139 wiring and MAME bank mapping</td></tr>
-<tr><td><code>PB3</code> enables the optional BASIC-ROM selection mechanism</td><td>Very high</td><td>MAME PPI description and ROM decode behavior</td></tr>
-<tr><td>The fourth bank code (<code>11</code>) leaves no U13-U15 EPROM selected</td><td>High</td><td>Unused decoder output plus MAME behavior</td></tr>
-<tr><td>U13-U15 are separate from the U1 <code>SYS 61000</code> RAM-resident command extension</td><td>Very high</td><td>U1 disassembly and relocation analysis</td></tr>
-<tr><td>The sockets were intended for a larger optional BASIC-related ROM facility</td><td>High, but inferential</td><td>Address window, control-signal role, capacity, and BusCard feature set</td></tr>
-<tr><td>They contained an exact Commodore PET/CBM BASIC 4.0 ROM set</td><td>Unknown</td><td>No ROM dumps or definitive documentation presently available</td></tr>
+  <tr><th>Conclusion</th><th>Confidence</th><th>Basis</th></tr>
+  <tr><td>U13-U15 are three 8K TMS2564 ROM positions</td><td>Very high</td><td>Schematic and device type</td></tr>
+  <tr><td>They share the <code>$A000-$BFFF</code> CPU window rather than forming a directly visible 24K range</td><td>Very high</td><td>Decode logic and MAME hardware model</td></tr>
+  <tr><td><code>PB0/PB1</code> select among U15, U14, and U13</td><td>Very high</td><td>Schematic 74LS139 wiring and MAME bank mapping</td></tr>
+  <tr><td><code>PB3</code> enables the optional BASIC-ROM selection mechanism</td><td>Very high</td><td>MAME PPI description and ROM decode behavior</td></tr>
+  <tr><td>The fourth bank code (<code>11</code>) leaves no U13-U15 EPROM selected</td><td>High</td><td>Unused decoder output plus MAME behavior</td></tr>
+  <tr><td>U13-U15 are separate from the U1 <code>SYS 61000</code> RAM-resident command extension</td><td>Very high</td><td>U1 disassembly and relocation analysis</td></tr>
+  <tr><td>The sockets were intended for a larger optional BASIC-related ROM facility</td><td>High, but inferential</td><td>Address window, control-signal role, capacity, and BusCard feature set</td></tr>
+  <tr><td>They contained an exact Commodore PET/CBM BASIC 4.0 ROM set</td><td>Unknown</td><td>No ROM dumps or definitive documentation presently available</td></tr>
 </table>
 
 <h1>What would settle the remaining questions</h1>
@@ -415,13 +413,11 @@ Commodore and Batteries Included ROMs.</p>
 <p>Other useful evidence would include:</p>
 
 <ol>
-<li>an original option sheet, price list, dealer catalog, or advertisement that
-specifically mentions the three-ROM option;</li>
-<li>a BusCard manual revision describing XU13-XU15 or ROM bank selection;</li>
-<li>surviving EPROM images labelled U13, U14, or U15;</li>
-<li>another BusCard firmware revision that contains code explicitly selecting
-banks 0, 1, or 2 for an optional language package;</li>
-<li>execution traces from a populated board or a reconstructed ROM set in MAME.</li>
+  <li>an original option sheet, price list, dealer catalog, or advertisement that specifically mentions the three-ROM option;</li>
+  <li>a BusCard manual revision describing XU13-XU15 or ROM bank selection;</li>
+  <li>surviving EPROM images labelled U13, U14, or U15;</li>
+  <li>another BusCard firmware revision that contains code explicitly selecting banks 0, 1, or 2 for an optional language package;</li>
+  <li>execution traces from a populated board or a reconstructed ROM set in MAME.</li>
 </ol>
 
 <p>Until such evidence is found, the best description is functional rather than
@@ -432,13 +428,13 @@ intended for BASIC-related expansion.</strong></p>
 <h1>References</h1>
 
 <ul>
-<li><a href="https://github.com/pdbuchan/buscard">BusCard project repository</a></li>
-<li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/eagle/buscard.sch">Reverse-engineered EAGLE schematic</a></li>
-<li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/schematic.pdf">BusCard schematic PDF</a></li>
-<li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/buscard_rev_a_manual.pdf">Original BusCard Rev A manual</a></li>
-<li><a href="https://github.com/mamedev/mame/blob/master/src/devices/bus/c64/buscard.cpp">MAME BusCard implementation</a></li>
-<li>Companion U1 annotated 6502 disassembly: <code>buscard_u1_6502_annotated_listing.txt</code></li>
-<li>Companion U1 ROM discussion: <code>buscard_u1_rom_discussion.md</code></li>
+  <li><a href="https://github.com/pdbuchan/buscard">BusCard project repository</a></li>
+  <li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/eagle/buscard.sch">Reverse-engineered EAGLE schematic</a></li>
+  <li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/schematic.pdf">BusCard schematic PDF</a></li>
+  <li><a href="https://github.com/pdbuchan/buscard/blob/main/docs/assets/buscard_rev_a_manual.pdf">Original BusCard Rev A manual</a></li>
+  <li><a href="https://github.com/mamedev/mame/blob/master/src/devices/bus/c64/buscard.cpp">MAME BusCard implementation</a></li>
+  <li>Companion U1 annotated 6502 disassembly: <code>buscard_u1_6502_annotated_listing.txt</code></li>
+  <li>Companion U1 ROM discussion: <code>buscard_u1_rom_discussion.md</code></li>
 </ul>
 
 <h1>Summary</h1>
