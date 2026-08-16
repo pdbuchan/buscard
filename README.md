@@ -6,6 +6,10 @@ This repository documents information on the BusCard, an IEEE-488 and parallel p
 
 Unlike the BusCard II, the BusCard does not contain any proprietary integrated circuits. As a result, I was able to successfully reverse-engineer it and produce an exact working duplicate. I used EAGLE CAD software for the schematic and circuit board design. All information required to produce it is provided. If you would like to build it, you can send the GERBER files provided here to the manufacturer of your choice. You would only need EAGLE if you wish to change the board layout or circuit.
 
+## License
+
+All of my photographs and EAGLE files are released under [Creative Commons License CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). The original BusCard, EPROM content, and user manual are copyright Batteries Included Ltd.
+
 ## Repository layout
 
 The repository layout is designed so that the page can be published directly with GitHub Pages.
