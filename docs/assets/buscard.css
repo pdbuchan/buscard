@@ -1,58 +1,260 @@
-/*
- * Shared stylesheet for the BusCard Project.
- */
-
-body {
-  background-color: black;
-  color: white;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #d0d0d0;
+  --border: #555555;
+  --accent: #7db8ff;
+  --accent-hover: #b7d8ff;
+  --radius: 12px;
+  --content: 1180px;
 }
 
-a:link {
-  color: #66b3ff;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
 }
 
 a:visited {
-  color: #c58cff;
+  color: #c99cff;
 }
 
 a:hover,
 a:focus {
-  color: white;
+  color: var(--accent-hover);
 }
 
-h2 {
-  font-size: 1.2em;
+header.site-header {
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner,
+main,
+.footer-inner {
+  width: min(calc(100% - 32px), var(--content));
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.site-title {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a,
+nav a:visited {
+  color: var(--text);
+  text-decoration: none;
   font-weight: 600;
-  margin-top: 2em;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 58px 0 34px;
+}
+
+.hero h1 {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.hero p,
+.lead {
+  max-width: 940px;
+  color: var(--muted);
+}
+
+.hero p {
+  margin: 0 0 14px;
+  font-size: 1.14rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button,
+.button:visited {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid var(--text);
+  border-radius: 8px;
+  background-color: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button.secondary,
+.button.secondary:visited {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d9d9d9;
+  color: var(--bg);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: #1a1a1a;
+  color: var(--text);
+}
+
+section {
+  margin: 0 0 48px;
+  scroll-margin-top: 24px;
+}
+
+section > h2 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+}
+
+.panel {
+  padding: 22px 24px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.panel > :first-child {
+  margin-top: 0;
+}
+
+.panel > :last-child {
+  margin-bottom: 0;
 }
 
 p {
-  font-size: 14pt;
-  text-align: left;
-}
-
-p.signature {
-  font-size: 10pt;
+  margin-top: 0;
 }
 
 ul,
 ol {
-  font-size: 12pt;
-  text-align: left;
+  margin: 0;
+  padding-left: 1.45em;
+}
+
+li + li {
+  margin-top: 0.75em;
+}
+
+code,
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  padding: 0.1em 0.3em;
+  background-color: #151515;
+  color: var(--text);
+  border-radius: 4px;
 }
 
 .gallery-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
 }
 
-/* Keep large images within the browser window on narrow screens. */
 img {
   max-width: 100%;
   height: auto;
+}
+
+.back-to-top {
+  margin-top: 18px;
+  font-size: 0.92rem;
+}
+
+footer {
+  margin-top: 64px;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
 }
