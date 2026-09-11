@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9965,7 +9965,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="mystery_plug-MTA04-100">
+<library name="diagnostic-header-MTA04-100">
 <packages>
 <package name="10X04MTA">
 <description>&lt;b&gt;AMP MTA connector&lt;/b&gt;&lt;p&gt;
@@ -11037,7 +11037,7 @@ type 0207, grid 10 mm</description>
 <part name="D8" library="1N4148" deviceset="DIODE-1N4148" device="DO-1N4148" value="1N4148"/>
 <part name="S1" library="dip-switch-DS08" deviceset="DS08" device="" value="DIP Switch"/>
 <part name="J1" library="clip-header-MTA02-100" deviceset="MTA02-100" device=""/>
-<part name="J2" library="mystery_plug-MTA04-100" deviceset="MTA04-100" device=""/>
+<part name="J2" library="diagnostic-header-MTA04-100" deviceset="MTA04-100" device=""/>
 <part name="P4" library="commodore-card-edges" deviceset="COMMODORE_PARALLEL_PORT_CARD_EDGE" device="" value="Parallel Port"/>
 <part name="P3" library="commodore-card-edges" deviceset="COMMODORE_IEEE-488_PORT_CARD_EDGE" device=""/>
 <part name="P1" library="commodore-card-edges" deviceset="COMMODORE_64_EXPANSION_PORT_CARD_EDGE" device=""/>
@@ -11082,16 +11082,18 @@ type 0207, grid 10 mm</description>
 <text x="-159.385" y="-89.8525" size="1.778" layer="91">PA7</text>
 <text x="296.8625" y="-273.05" size="1.778" layer="96">P. David Buchan</text>
 <text x="296.8625" y="-242.57" size="1.778" layer="96">BusCard for Commodore 64</text>
-<text x="387.35" y="-242.57" size="2.54" layer="96">0</text>
+<text x="387.35" y="-242.57" size="2.54" layer="96">1</text>
 <text x="296.8625" y="-262.89" size="1.778" layer="96">A reverse-engineered IEEE-488 and parallel printer interface
 for Commodore 64, based on the original BusCard (R)
 by Batteries Included Ltd., Toronto, Canada.
 
 The original 1983 circuit board is labeled as Revision A.
 
-For more information, see pdbuchan.com.</text>
+For more information, see https://github.com/pdbuchan/buscard</text>
 <text x="208.915" y="-123.19" size="1.27" layer="91" rot="R90">N/C</text>
-<text x="240.03" y="-125.73" size="1.778" layer="96" rot="R180">Diagnostic Jack</text>
+<text x="280.67" y="-133.35" size="1.778" layer="96" rot="R180">Diagnostic/Test Header J2 provides access to !HIRAM!,
+!LORAM!, and the BusCard ROM-inactive status signal
+(BC-ROM-INACTIVE) for testing and troubleshooting.</text>
 <text x="-32.385" y="-93.0275" size="1.778" layer="91">PA0</text>
 <text x="-32.385" y="-95.5675" size="1.778" layer="91">PA1</text>
 <text x="-32.385" y="-98.1075" size="1.778" layer="91">PA2</text>
@@ -11100,7 +11102,7 @@ For more information, see pdbuchan.com.</text>
 <text x="-32.385" y="-105.7275" size="1.778" layer="91">PA5</text>
 <text x="-32.385" y="-108.2675" size="1.778" layer="91">PA6</text>
 <text x="-32.385" y="-110.8075" size="1.778" layer="91">PA7</text>
-<text x="347.98" y="-273.05" size="1.778" layer="96">July 2017</text>
+<text x="347.98" y="-273.05" size="1.778" layer="96">September 2026</text>
 <text x="-55.88" y="-123.825" size="3.81" layer="96">Switch Functions and Settings</text>
 <text x="-55.88" y="-152.4" size="1.778" layer="96">Switches 1 and 2: Device 4 (printer)
 
@@ -11125,10 +11127,10 @@ SW    Device No.
 
 Devices 11 and up have no switches and are
 permanently allocated to the BusCard IEEE-488 port.</text>
-<text x="264.795" y="-130.81" size="1.778" layer="96">For use with Type A C64 only:
-Jack for clip-leads
+<text x="264.795" y="-130.81" size="1.778" layer="96">J1 for use with Type A C64 only:
+2-pin header for clip leads
 to C64 !HIRAM! and !LORAM!
-bits at R44 and R45,
+signals at R44 and R45,
 respectively. Pin 1 of J1
 connects to R44 using red clip,
 pin 2 to R45 using black clip.
@@ -13057,7 +13059,7 @@ Pins 1 and 2 shunted</text>
 <label x="-40.64" y="154.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MP4" class="0">
+<net name="BC-ROM-INACTIVE" class="0">
 <segment>
 <wire x1="181.61" y1="-208.915" x2="189.23" y2="-208.915" width="0.1524" layer="91"/>
 <wire x1="189.23" y1="-208.915" x2="238.76" y2="-208.915" width="0.1524" layer="91"/>
