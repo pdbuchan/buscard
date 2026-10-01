@@ -1,6 +1,6 @@
 # BusCard Project
 
-The complete illustrated project description is available on the [BusCard GitHub Pages website](https://pdbuchan.github.io/buscard/).
+The illustrated project description is available on the [BusCard GitHub Pages website](https://pdbuchan.github.io/buscard/).
 
 This repository documents information on the BusCard, an IEEE-488 and parallel printer interface for the Commodore 64. The BusCard, and subsequent BusCard II, were manufactured by Batteries Included Ltd. of Toronto, Canada. On my BusCard, the circuit board is labeled "Rev A" and "1983". I used it to provide IEEE-488 functionality to my Commodore 64 in order to use a 4040 disk drive and 8023P printer. It also provides BASIC 4.0 and comes with an assembler and disassembler.
 
