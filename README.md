@@ -12,8 +12,6 @@ All of my photographs and EAGLE files are released under [Creative Commons Licen
 
 ## Repository layout
 
-The repository layout is designed so that the page can be published directly with GitHub Pages.
-
 ```text
 buscard/
 ├── README.md
